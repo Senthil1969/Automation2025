@@ -17,7 +17,7 @@ import java.time.Duration;
 
 public class rAcademy {
 
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver ;
     @BeforeTest
     public void chromeDriverSetUp(){
 
@@ -40,7 +40,7 @@ public class rAcademy {
     }
     @Test(groups = {"Regression"})
     public void verifyOptions(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //Find the element
         //Select se = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dropdown-class-example"))));
         Select se = new Select(wait.until(ExpectedConditions.presenceOfElementLocated(By.id("dropdown-class-example"))));
